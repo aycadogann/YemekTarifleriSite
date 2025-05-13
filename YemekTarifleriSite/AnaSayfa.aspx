@@ -6,9 +6,13 @@
         }
         .auto-style5 {
             font-size: x-large;
+            color: #000000;
         }
         .auto-style7 {
             color: #000000;
+        }
+        .auto-style8 {
+            text-align: center;
         }
     </style>
 </asp:Content>
@@ -18,7 +22,7 @@
         <ItemTemplate>
             <table class="auto-style4">
                 <tr>
-                    <td><strong>
+                    <td class="auto-style8"><strong>
 
                        <a href="YemekDetay.aspx?YemekId=<%# Eval("YemekId") %>"> <asp:Label ID="Label3" runat="server" CssClass="auto-style5" Text='<%# Eval("YemekAd") %>'></asp:Label></a>
                         

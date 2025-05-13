@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style4 {
-            font-size: xx-large;
+            font-size: x-large;
         }
         .auto-style5 {
             width: 100%;
@@ -12,6 +12,16 @@
         }
         .auto-style7 {
             font-size: large;
+        }
+        .auto-style8 {
+            background-color: #FFFFCC;
+            text-align: center;
+        }
+        .auto-style9 {
+            text-align: right;
+        }
+        .auto-style10 {
+            font-weight: bold;
         }
     </style>
 </asp:Content>
@@ -37,4 +47,49 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
+
+        </strong>
+    <div>&nbsp;</div>
+    <div class="auto-style8">YORUM YAPMA PANELİ</div>
+        <tr>
+            <td>
+    <table class="auto-style5">
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style9"><strong><em>Ad Soyad:</em></strong></td>
+            <td>
+                <asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="200px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style9"><strong><em>Mail:</em></strong></td>
+            <td>
+                <asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="200px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style9"><strong><em>Yorumunuz:</em></strong></td>
+            <td>
+                <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="200px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <strong>
+                <asp:Button ID="btnYorumYap" runat="server" Text="Yorum Yap" CssClass="auto-style10" OnClick="btnYorumYap_Click" Width="200px" />
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+
+
 </asp:Content>
