@@ -6,14 +6,14 @@
         }
         .auto-style5 {
             font-size: x-large;
-            color: #000000;
-        }
+        color: #000000;
+    }
         .auto-style7 {
             color: #000000;
         }
-        .auto-style8 {
-            text-align: center;
-        }
+    .auto-style8 {
+        text-align: center;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
