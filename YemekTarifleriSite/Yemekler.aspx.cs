@@ -16,10 +16,19 @@ namespace YemekTarifleriSite
             Panel2.Visible = false;
             Panel5.Visible = false;
 
+            //Yemek Listesi
             SqlCommand komut = new SqlCommand("select * from Yemekler", sqlSinif.baglanti());
             SqlDataReader oku = komut.ExecuteReader();
             DataList1.DataSource = oku;
             DataList1.DataBind();
+
+            //Kategori Listesi
+            SqlCommand komut2 = new SqlCommand("select * from Kategoriler", sqlSinif.baglanti());
+            SqlDataReader oku2 = komut2.ExecuteReader();
+            DropDownList1.DataTextField = "KategoriAd";
+            DropDownList1.DataValueField = "KategoriId";
+            DropDownList1.DataSource = oku2;
+            DropDownList1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -22,6 +22,9 @@
         .auto-style9 {
             width: 32px;
         }
+        .auto-style10 {
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -79,22 +82,39 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style5">Kategori Ad:</td>
+                <td class="auto-style5">Yemek Ad:</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5">Kategori İkon:</td>
+                <td class="auto-style5">Malzemeler:</td>
                 <td>
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:TextBox ID="TextBox2" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">Yemek Tarifi:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">Kategori:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="300px">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td>
-                    <asp:Button ID="btnEkle" runat="server" Text="Ekle"  />
+                <td class="auto-style10">
+                    <asp:Button ID="btnEkle" runat="server" Text="Ekle" Width="93px" />
                 </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style10">&nbsp;</td>
             </tr>
         </table>
     </asp:Panel>
