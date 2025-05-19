@@ -57,12 +57,19 @@ namespace YemekTarifleriSite
 
         protected void btnEkle_Click(object sender, EventArgs e)
         {
+            //Yemek Ekleme
             SqlCommand komut = new SqlCommand("insert into Yemekler (YemekAd,YemekMalzeme, YemekTarif,KategoriId) values (@p1,@p2,@p3,@p4)", sqlSinif.baglanti());
             komut.Parameters.AddWithValue("@p1", TextBox1.Text);
             komut.Parameters.AddWithValue("@p2", TextBox2.Text);
             komut.Parameters.AddWithValue("@p3", TextBox3.Text);
             komut.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
             komut.ExecuteNonQuery();
+            sqlSinif.baglanti().Close();
+
+            //Kategori Sayısını Arttırma
+            SqlCommand komut2 = new SqlCommand("update Kategoriler set KategoriAdet=KategoriAdet+1 where KategoriId=@p1", sqlSinif.baglanti());
+            komut2.Parameters.AddWithValue("@p1", DropDownList1.SelectedValue);
+            komut2.ExecuteNonQuery();
             sqlSinif.baglanti().Close();
         }
     }
