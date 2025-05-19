@@ -15,6 +15,16 @@ namespace YemekTarifleriSite
         {
             Panel2.Visible = false;
             Panel5.Visible = false;
+            if (Page.IsPostBack==false)
+            {
+                //Kategori Listesi
+                SqlCommand komut2 = new SqlCommand("select * from Kategoriler", sqlSinif.baglanti());
+                SqlDataReader oku2 = komut2.ExecuteReader();
+                DropDownList1.DataTextField = "KategoriAd";
+                DropDownList1.DataValueField = "KategoriId";
+                DropDownList1.DataSource = oku2;
+                DropDownList1.DataBind();
+            }
 
             //Yemek Listesi
             SqlCommand komut = new SqlCommand("select * from Yemekler", sqlSinif.baglanti());
@@ -22,13 +32,7 @@ namespace YemekTarifleriSite
             DataList1.DataSource = oku;
             DataList1.DataBind();
 
-            //Kategori Listesi
-            SqlCommand komut2 = new SqlCommand("select * from Kategoriler", sqlSinif.baglanti());
-            SqlDataReader oku2 = komut2.ExecuteReader();
-            DropDownList1.DataTextField = "KategoriAd";
-            DropDownList1.DataValueField = "KategoriId";
-            DropDownList1.DataSource = oku2;
-            DropDownList1.DataBind();
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -49,6 +53,17 @@ namespace YemekTarifleriSite
         protected void Button4_Click(object sender, EventArgs e)
         {
             Panel5.Visible = false;
+        }
+
+        protected void btnEkle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("insert into Yemekler (YemekAd,YemekMalzeme, YemekTarif,KategoriId) values (@p1,@p2,@p3,@p4)", sqlSinif.baglanti());
+            komut.Parameters.AddWithValue("@p1", TextBox1.Text);
+            komut.Parameters.AddWithValue("@p2", TextBox2.Text);
+            komut.Parameters.AddWithValue("@p3", TextBox3.Text);
+            komut.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+            komut.ExecuteNonQuery();
+            sqlSinif.baglanti().Close();
         }
     }
 }
