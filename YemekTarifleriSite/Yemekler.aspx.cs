@@ -11,10 +11,19 @@ namespace YemekTarifleriSite
     public partial class Yemekler : System.Web.UI.Page
     {
         SqlSinif sqlSinif = new SqlSinif();
+        string islem = "";
+        string id = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             Panel2.Visible = false;
             Panel5.Visible = false;
+
+            if (Page.IsPostBack==false)
+            {
+                id = Request.QueryString["YemekId"];
+                islem = Request.QueryString["islem"];
+            }
+
             if (Page.IsPostBack==false)
             {
                 //Kategori Listesi
@@ -32,7 +41,14 @@ namespace YemekTarifleriSite
             DataList1.DataSource = oku;
             DataList1.DataBind();
 
-            
+            if (islem=="sil")
+            {
+                SqlCommand komut2 = new SqlCommand("delete from Yemekler where YemekId=@p1", sqlSinif.baglanti());
+                komut2.Parameters.AddWithValue("@p1", id);
+                komut2.ExecuteNonQuery();
+                sqlSinif.baglanti().Close();
+ 
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
