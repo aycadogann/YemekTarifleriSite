@@ -56,7 +56,12 @@
                 </table>
             </ItemTemplate>
         </asp:DataList>
+        <div>
+            &nbsp;&nbsp;
+        </div>
 </asp:Panel>
+    <div>
+        &nbsp;&nbsp;</div>
     <asp:Panel ID="Panel3" runat="server" CssClass="auto-style3">
         <asp:Panel ID="Panel4" runat="server" CssClass="auto-style3">
             <table class="auto-style4">
