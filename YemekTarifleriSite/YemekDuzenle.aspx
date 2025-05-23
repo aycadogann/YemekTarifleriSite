@@ -16,7 +16,7 @@
         text-align: left;
     }
         .auto-style8 {
-            font-weight: bold;
+            text-align: right;
         }
     </style>
 </asp:Content>
@@ -49,6 +49,12 @@
         <td>
             <asp:DropDownList ID="DropDownList1" runat="server" Width="250px">
             </asp:DropDownList>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style8"><strong>Yemek Görüntü:</strong></td>
+        <td class="auto-style7">
+            <asp:FileUpload ID="FileUpload1" runat="server" Width="250px" />
         </td>
     </tr>
     <tr>

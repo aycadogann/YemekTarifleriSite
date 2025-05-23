@@ -74,6 +74,7 @@
     <Content Include="GununYemegi.aspx" />
     <Content Include="GununYemegiAdmin.aspx" />
     <Content Include="Hakkimizda.aspx" />
+    <Content Include="HakkimizdaAdmin.aspx" />
     <Content Include="Ikonlar\choose.png" />
     <Content Include="Ikonlar\delete.png" />
     <Content Include="Ikonlar\offer.png" />
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="Hakkimizda.aspx.designer.cs">
       <DependentUpon>Hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HakkimizdaAdmin.aspx.cs">
+      <DependentUpon>HakkimizdaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HakkimizdaAdmin.aspx.designer.cs">
+      <DependentUpon>HakkimizdaAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="iletisim.aspx.cs">
       <DependentUpon>iletisim.aspx</DependentUpon>
