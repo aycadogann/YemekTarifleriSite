@@ -16,17 +16,30 @@ namespace YemekTarifleriSite
         {
             id = Request.QueryString["YorumId"];
 
-            SqlCommand komut = new SqlCommand("select YorumAdSoyad, YorumMail, YorumIcerik, YemekAd from Yorumlar " +
-                "inner join Yemekler on Yorumlar.YemekId=Yemekler.YemekId where YorumId=@p1",sqlSinif.baglanti());
-            komut.Parameters.AddWithValue("@p1", id);
-            SqlDataReader oku = komut.ExecuteReader();
-            while (oku.Read())
+            if (Page.IsPostBack == false)
             {
-                txtAd.Text = oku[0].ToString();
-                txtMail.Text = oku[1].ToString();
-                txtIcerik.Text = oku[2].ToString();
-                txtYemek.Text = oku[3].ToString();
+                SqlCommand komut = new SqlCommand("select YorumAdSoyad, YorumMail, YorumIcerik, YemekAd from Yorumlar " +
+                    "inner join Yemekler on Yorumlar.YemekId=Yemekler.YemekId where YorumId=@p1", sqlSinif.baglanti());
+                komut.Parameters.AddWithValue("@p1", id);
+                SqlDataReader oku = komut.ExecuteReader();
+                while (oku.Read())
+                {
+                    txtAd.Text = oku[0].ToString();
+                    txtMail.Text = oku[1].ToString();
+                    txtIcerik.Text = oku[2].ToString();
+                    txtYemek.Text = oku[3].ToString();
+                }
+                sqlSinif.baglanti().Close();
             }
+        }
+
+        protected void btnOnayla_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update Yorumlar set YorumIcerik=@p1, YorumOnay=@p2 where YorumId=@p3", sqlSinif.baglanti());
+            komut.Parameters.AddWithValue("@p1", txtIcerik.Text);
+            komut.Parameters.AddWithValue("@p2", "true");
+            komut.Parameters.AddWithValue("@p3", id);
+            komut.ExecuteNonQuery();
             sqlSinif.baglanti().Close();
         }
     }

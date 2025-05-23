@@ -13,7 +13,7 @@ namespace YemekTarifleriSite
         SqlSinif sqlSinif = new SqlSinif();
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("select * from GununYemegi", sqlSinif.baglanti());
+            SqlCommand komut = new SqlCommand("select * from Yemekler where Durum=1", sqlSinif.baglanti());
             SqlDataReader oku = komut.ExecuteReader();
             DataList2.DataSource = oku;
             DataList2.DataBind();

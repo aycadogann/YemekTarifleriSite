@@ -16,6 +16,9 @@
         .auto-style2 {
             background-color: #66CCFF;
         }
+        .auto-style3 {
+            font-size: medium;
+        }
     </style>
 </head>
 <body>
@@ -34,25 +37,25 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF"><a href="Kategoriler.aspx"> KATEGORİLER</td></a>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="Kategoriler.aspx" class="auto-style3"><strong>KATEGORİLER</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF"><a href="Yemekler.aspx">YEMEKLER</td></a>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="Yemekler.aspx" class="auto-style3"><strong>YEMEKLER</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF"><a href="Yorumlar.aspx">YORUMLAR</td></a>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="Yorumlar.aspx" class="auto-style3"><strong>YORUMLAR</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF">MESAJLAR</td>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="Mesajlar.aspx" class="auto-style3"><strong>MESAJLAR</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF">GÜNÜN YEMEĞİ</td>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="GununYemegiAdmin.aspx"><strong>GÜNÜN YEMEĞİ</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF">ÖNERİLER</td>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><a href="Tarifler.aspx"><strong>TARİFLER</strong></a></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #FFFFFF">HAKKIMIZDA</td>
+                        <td style="border: thin solid #FFFFFF" class="auto-style3"><strong>HAKKIMIZDA</strong></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>

@@ -15,7 +15,10 @@
     .auto-style7 {
         text-align: left;
     }
-</style>
+        .auto-style8 {
+            font-weight: bold;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style3">
@@ -52,6 +55,12 @@
         <td>&nbsp;</td>
         <td class="auto-style7"><strong>
             <asp:Button ID="btnGuncelle" runat="server" CssClass="auto-style6" OnClick="btnGuncelle_Click" Text="Güncelle" Width="250px" />
+            </strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td class="auto-style7"><strong>
+            <asp:Button ID="btnGununYemegiSec" runat="server" CssClass="auto-style6" Text="Günün Yemeği Seç" Width="250px" OnClick="btnGununYemegiSec_Click" />
             </strong></td>
     </tr>
 </table>

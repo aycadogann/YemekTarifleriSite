@@ -11,7 +11,7 @@ namespace YemekTarifleriSite
 {
 
 
-    public partial class YemekDuzenle
+    public partial class MesajDetay
     {
 
         /// <summary>
@@ -42,30 +42,12 @@ namespace YemekTarifleriSite
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// TextBox4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
-        /// <summary>
-        /// btnGuncelle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuncelle;
-
-        /// <summary>
-        /// btnGununYemegiSec control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGununYemegiSec;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
     }
 }
