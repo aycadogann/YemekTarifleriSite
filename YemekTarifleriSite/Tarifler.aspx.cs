@@ -14,11 +14,18 @@ namespace YemekTarifleriSite
         protected void Page_Load(object sender, EventArgs e)
         {
             Panel2.Visible = false;
+            Panel4.Visible = false;
 
-            SqlCommand komut = new SqlCommand("select * from Tarifler", sqlSinif.baglanti());
+            SqlCommand komut = new SqlCommand("select * from Tarifler where TarifDurum=0", sqlSinif.baglanti());
             SqlDataReader oku = komut.ExecuteReader();
             DataList1.DataSource = oku;
             DataList1.DataBind();
+            sqlSinif.baglanti().Close();
+
+            SqlCommand komut2 = new SqlCommand("select * from Tarifler where TarifDurum=1", sqlSinif.baglanti());
+            SqlDataReader oku2 = komut2.ExecuteReader();
+            DataList2.DataSource = oku2;
+            DataList2.DataBind();
             sqlSinif.baglanti().Close();
         }
 
@@ -30,6 +37,16 @@ namespace YemekTarifleriSite
         protected void Button2_Click(object sender, EventArgs e)
         {
             Panel2.Visible = false;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = true;
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = false;
         }
     }
 }
