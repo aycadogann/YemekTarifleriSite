@@ -76,6 +76,7 @@
     <Content Include="Hakkimizda.aspx" />
     <Content Include="Ikonlar\choose.png" />
     <Content Include="Ikonlar\delete.png" />
+    <Content Include="Ikonlar\offer.png" />
     <Content Include="Ikonlar\read.png" />
     <Content Include="Ikonlar\update.png" />
     <Content Include="iletisim.aspx" />
