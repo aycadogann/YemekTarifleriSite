@@ -2,31 +2,47 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
 
+    .auto-style3 {
+            background-color: #C0C0C0;
+    }
     .auto-style4 {
         width: 100%;
     }
-        .auto-style9 {
-            width: 32px;
+        .auto-style5 {
+            width: 69px;
+            text-align: right;
         }
-        .auto-style8 {
-            width: 51px;
+        .auto-style6 {
+            width: 68px;
+        }
+        .auto-style7 {
+            width: 67px;
+        }
+        .auto-style10 {
+            width: 42px;
+        }
+        .auto-style11 {
+            width: 36px;
         }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Panel ID="Panel1" runat="server" CssClass="auto-style3">
+    
+<asp:Panel ID="Panel1" runat="server" CssClass="auto-style3">
         <table class="auto-style4">
             <tr>
-                <td class="auto-style9">
-                    <asp:Button ID="Button1" runat="server" Font-Bold="True" Height="30px" Text="+" Width="30px" OnClick="Button1_Click" />
+                <td class="auto-style11">
+                    <asp:Button ID="Button1" runat="server" Font-Bold="True" Height="30px" Text="+" Width="30px" OnClick="Button1_Click1" />
                 </td>
-                <td class="auto-style8">
+                <td class="auto-style10">
                     <asp:Button ID="Button2" runat="server" Font-Bold="True" Height="30px" Text="-" Width="30px" OnClick="Button2_Click" />
                 </td>
                 <td>TARİF LİSTESİ</td>
             </tr>
         </table>
-    </asp:Panel><asp:Panel ID="Panel2" runat="server">
+    </asp:Panel>
+    
+    <asp:Panel ID="Panel2" runat="server">
         <asp:DataList ID="DataList1" runat="server" Width="444px">
             <ItemTemplate>
                 <table class="auto-style4">
@@ -35,7 +51,7 @@
                             <asp:Label ID="Label1" runat="server" CssClass="auto-style7" Text='<%# Eval("TarifAd") %>'></asp:Label>
                         </td>
                         <td class="auto-style5">
-                           <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Ikonlar/offer.png" Width="30px" /> </a>
+                          <a href="TarifOnerDetay.aspx?TarifId=<%#Eval("TarifId") %>"> <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Ikonlar/offer.png" Width="30px" /> </a>
                         </td>
                     </tr>
                 </table>

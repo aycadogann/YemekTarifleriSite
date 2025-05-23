@@ -53,43 +53,40 @@
     <div class="auto-style8">YORUM YAPMA PANELİ</div>
         <tr>
             <td>
-    <table class="auto-style5">
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style9"><strong><em>Ad Soyad:</em></strong></td>
-            <td>
-                <asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="200px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style9"><strong><em>Mail:</em></strong></td>
-            <td>
-                <asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="200px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style9"><strong><em>Yorumunuz:</em></strong></td>
-            <td>
-                <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="200px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-                <strong>
-                <asp:Button ID="btnYorumYap" runat="server" Text="Yorum Yap" CssClass="auto-style10" OnClick="btnYorumYap_Click" Width="200px" />
-                </strong>
-            </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-    </table>
-
-
-</asp:Content>
+                <asp:Panel ID="Panel1" runat="server">
+                    <table class="auto-style5">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style9"><strong><em>Ad Soyad:</em></strong></td>
+                            <td>
+                                <asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="200px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style9"><strong><em>Mail:</em></strong></td>
+                            <td>
+                                <asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="200px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style9"><strong><em>Yorumunuz:</em></strong></td>
+                            <td>
+                                <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="200px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><strong>
+                                <asp:Button ID="btnYorumYap" runat="server" Text="Yorum Yap" CssClass="auto-style10" OnClick="btnYorumYap_Click" Width="200px" />
+                                </strong></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+    </asp:Panel>
+    </asp:Content>
